@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Component should TextInput render  1`] = `
+<TextInput
+  onChangeText={[Function]}
+  style={
+    Object {
+      "borderWidth": 1,
+      "height": 40,
+      "padding": 10,
+    }
+  }
+  testID="text-input"
+/>
+`;
