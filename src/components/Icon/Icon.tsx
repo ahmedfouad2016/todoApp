@@ -13,7 +13,7 @@ export function Icon(props: IconProps) {
   ]);
   return (
     <View style={containerStyle}>
-      <Image style={style} source={icons[icon]} />
+      <Image testID="icon-image" style={style} source={icons[icon]} />
     </View>
   );
 }

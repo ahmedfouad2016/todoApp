@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Component should Icon render  1`] = `
+<View>
+  <RCTImageView
+    internal_analyticTag={null}
+    resizeMode="contain"
+    source={
+      Array [
+        Object {
+          "testUri": "../../../src/assets/icons/add.png",
+        },
+      ]
+    }
+    style={
+      Object {
+        "height": 25,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 25,
+      }
+    }
+    testID="icon-image"
+  />
+</View>
+`;
