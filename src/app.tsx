@@ -16,9 +16,6 @@ const App: React.FC<{}> = () => {
     const getLang = async () => {
       try {
         const value = await AsyncStorage.getItem('@current_lang');
-        if (value !== null) {
-          return value;
-        }
         return value;
       } catch (e) {
         return null;
