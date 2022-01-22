@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from 'utils/colors';
 
 export default StyleSheet.create({
   row: {
@@ -9,7 +10,7 @@ export default StyleSheet.create({
     marginTop: 20,
   },
   icon: {
-    tintColor: '#4498D1',
+    tintColor: colors.sky,
   },
   input: {
     width: 300,
@@ -20,7 +21,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginHorizontal: 20,
-    backgroundColor: '#D3D3D3',
+    backgroundColor: colors.lightGray,
     borderRadius: 15,
     padding: 10,
     marginVertical: 5,
