@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo Lists Screen should List render 1`] = `
+<RCTScrollView
+  ListHeaderComponent={
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 20,
+        }
+      }
+    >
+      <TextInput
+        inputStyle={
+          Object {
+            "marginRight": 10,
+            "width": 300,
+          }
+        }
+        onChangeText={[Function]}
+        placeholder="list.placeholder.test"
+        value=""
+      />
+      <Memo(Pressable)
+        onPress={[Function]}
+        testID="add-list-btn"
+      >
+        <Icon
+          icon="add"
+          size={45}
+          style={
+            Object {
+              "tintColor": "#4498D1",
+            }
+          }
+        />
+      </Memo(Pressable)>
+    </View>
+  }
+  ListHeaderComponentStyle={
+    Object {
+      "marginBottom": 30,
+    }
+  }
+  data={Array []}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "marginBottom": 30,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 20,
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="list.placeholder.test"
+          style={
+            Object {
+              "borderWidth": 1,
+              "height": 40,
+              "marginRight": 10,
+              "padding": 10,
+              "width": 300,
+            }
+          }
+          testID="text-input"
+          value=""
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          testID="add-list-btn"
+        >
+          <View>
+            <RCTImageView
+              internal_analyticTag={null}
+              resizeMode="contain"
+              source={
+                Array [
+                  Object {
+                    "testUri": "../../../src/assets/icons/add.png",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "height": 45,
+                  "overflow": "hidden",
+                  "resizeMode": "contain",
+                  "tintColor": "#4498D1",
+                  "width": 45,
+                }
+              }
+              testID="icon-image"
+              tintColor="#4498D1"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

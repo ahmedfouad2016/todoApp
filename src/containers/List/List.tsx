@@ -25,6 +25,7 @@ function List({navigation}: Props) {
           placeholder={translate('list.placeholder')}
         />
         <Pressable
+          testID="add-list-btn"
           onPress={() => {
             if (listName) {
               dispatch(addList(listName));

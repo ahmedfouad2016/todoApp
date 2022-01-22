@@ -1,11 +1,11 @@
 import {useRoute} from '@react-navigation/native';
-import React, {useEffect} from 'react';
+import React, {useLayoutEffect} from 'react';
 import {View, Text} from 'react-native';
 import {Props, RouteProps} from './ListDetails.props';
 
 const ListDetails = ({navigation}: Props) => {
   const {params} = useRoute<RouteProps>();
-  useEffect(() => {
+  useLayoutEffect(() => {
     const list = params?.list;
     navigation.setOptions({
       title: list?.title || '',
