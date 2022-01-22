@@ -1,6 +1,12 @@
 {
     "common": {
         "en": "English",
-        "ar": "العربية"
+        "ar": "العربية",
+        "warning": "Warning"
+    },
+    "list": {
+        "placeholder": "add Todo List Name",
+        "nameRequired": "list name is required",
+        "title": "Todo Lists"
     }
 }

@@ -9,7 +9,7 @@ i18n.translations = {en, ar};
 i18n.locale = I18nManager.isRTL ? 'ar' : 'en';
 
 export function translate(key: string, options?: i18n.TranslateOptions) {
-  return key ? i18n.t(key, options) : null;
+  return key ? i18n.t(key, options) : '';
 }
 
 export function setLocal(tag: string): void {

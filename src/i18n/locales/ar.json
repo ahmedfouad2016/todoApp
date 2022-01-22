@@ -1,6 +1,11 @@
 {
     "common": {
         "en": "English",
-        "ar": "العربية"
+        "ar": "العربية",
+        "warning": "تحذير"
+    },
+    "list": {
+        "placeholder": "ادخل اسم قائمة المهام",
+        "nameRequired": "يجب ادخال اسم القائمه"
     }
 }
