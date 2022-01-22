@@ -1,13 +1,12 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {v1 as uuidv1} from 'uuid';
 
-interface todoType {
+export interface todoType {
   id: string;
   description: string;
   completed: boolean;
 }
 
-interface listType {
+export interface listType {
   id: string;
   title: string;
   todoList: todoType[];
@@ -27,7 +26,7 @@ const listSlice = createSlice({
   reducers: {
     addList(state, action: PayloadAction<string>) {
       state.lists.push({
-        id: uuidv1(),
+        id: new Date().getTime().toString(),
         title: action.payload,
         todoList: [],
       });
@@ -49,7 +48,7 @@ const listSlice = createSlice({
       );
       state.lists[index].todoList.push({
         ...action.payload.todo,
-        id: uuidv1(),
+        id: new Date().getTime().toString(),
       });
     },
     updateTodo(state, action: PayloadAction<{todo: todoType; list: listType}>) {
