@@ -35,6 +35,7 @@ const ListDetails = ({navigation}: Props) => {
           placeholder={translate('listDetails.placeholder')}
         />
         <Pressable
+          testID="add-todo-btn"
           onPress={() => {
             if (todoDesc) {
               dispatch(
@@ -104,7 +105,9 @@ const ListDetails = ({navigation}: Props) => {
               })
             }
           />
-          <Pressable onPress={() => deleteTodoCall(item)}>
+          <Pressable
+            onPress={() => deleteTodoCall(item)}
+            testID={`delete-btn-${item.description}`}>
             <Icon icon="delete" size={20} style={styles.delete} />
           </Pressable>
         </View>
