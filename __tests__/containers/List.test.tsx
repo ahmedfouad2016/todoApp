@@ -103,7 +103,6 @@ describe('Todo Lists Screen', () => {
     const payload = 'my list';
     act(() => {
       ReduxStore.dispatch(addList(payload));
-      console.log(ReduxStore.getState().lists.lists);
     });
     expect(queryAllByText(payload).length).toEqual(1);
   });

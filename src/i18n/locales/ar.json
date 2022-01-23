@@ -8,5 +8,9 @@
         "placeholder": "ادخل اسم قائمة المهام",
         "nameRequired": "يجب ادخال اسم القائمه",
         "title": "قوائم المهام"
+    },
+    "listDetails": {
+        "placeholder": "ادخل وصف المهمه",
+        "nameRequired": "يجب ادخال وصف للمهمه"
     }
 }

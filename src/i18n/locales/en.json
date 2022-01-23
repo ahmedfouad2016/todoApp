@@ -8,5 +8,9 @@
         "placeholder": "add Todo List Name",
         "nameRequired": "list name is required",
         "title": "Todo Lists"
+    },
+    "listDetails": {
+        "placeholder": "Add Todo Description",
+        "nameRequired": "todo name is required"
     }
 }
