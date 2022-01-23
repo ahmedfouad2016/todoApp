@@ -32,4 +32,7 @@ export default StyleSheet.create({
   header: {
     marginBottom: 30,
   },
+  delete: {
+    tintColor: colors.red,
+  },
 });

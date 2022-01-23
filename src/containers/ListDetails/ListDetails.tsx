@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useCallback, useLayoutEffect, useState} from 'react';
 import {View, Pressable, Alert, FlatList} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import {Icon, TextInput} from 'components';
@@ -6,7 +6,7 @@ import {translate} from 'i18n';
 import {useAppDispatch, useAppSelector} from 'utils/hooks';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {Props, RouteProps} from './ListDetails.props';
-import {addTodo, updateTodo} from 'store/List/ListSlice';
+import {addTodo, deleteTodo, todoType, updateTodo} from 'store/List/ListSlice';
 
 import styles from './ListDetails.styles';
 import {colors} from 'utils/colors';
@@ -60,6 +60,31 @@ const ListDetails = ({navigation}: Props) => {
       </View>
     );
   };
+
+  const updateTodoCall = useCallback(
+    (todo: todoType) => {
+      dispatch(
+        updateTodo({
+          list: params.list,
+          todo,
+        }),
+      );
+    },
+    [dispatch, params],
+  );
+
+  const deleteTodoCall = useCallback(
+    (todo: todoType) => {
+      dispatch(
+        deleteTodo({
+          list: params.list,
+          todo,
+        }),
+      );
+    },
+    [dispatch, params],
+  );
+
   return (
     <FlatList
       data={lists[listIndex].todoList}
@@ -72,18 +97,16 @@ const ListDetails = ({navigation}: Props) => {
             text={item.description}
             iconStyle={styles.check}
             isChecked={item.completed}
-            onPress={(isChecked: boolean) => {
-              dispatch(
-                updateTodo({
-                  list: params.list,
-                  todo: {
-                    ...item,
-                    completed: isChecked,
-                  },
-                }),
-              );
-            }}
+            onPress={(isChecked: boolean) =>
+              updateTodoCall({
+                ...item,
+                completed: isChecked,
+              })
+            }
           />
+          <Pressable onPress={() => deleteTodoCall(item)}>
+            <Icon icon="delete" size={20} style={styles.delete} />
+          </Pressable>
         </View>
       )}
       ListHeaderComponentStyle={styles.header}
